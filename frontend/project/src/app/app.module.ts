@@ -16,13 +16,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.component';
+import { InfoCardsComponent } from './content/info-cards/info-cards.component';
+import { InfoInsightsComponent } from './content/info-insights/info-insights.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     SidebarComponent,
-    ContentComponent
+    ContentComponent,
+    InfoCardsComponent,
+    InfoInsightsComponent
   ],
   imports: [
     BrowserModule,
