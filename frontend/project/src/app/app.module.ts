@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { BottomSheetOverviewExampleSheet } from './toolbar/toolbar.component';
 
 // Chart.js Module
 import { ChartsModule } from 'ng2-charts';
@@ -18,6 +19,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.component';
 import { InfoCardsComponent } from './content/info-cards/info-cards.component';
 import { InfoInsightsComponent } from './content/info-insights/info-insights.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { InfoInsightsComponent } from './content/info-insights/info-insights.com
     SidebarComponent,
     ContentComponent,
     InfoCardsComponent,
-    InfoInsightsComponent
+    InfoInsightsComponent,
+    BottomSheetOverviewExampleSheet
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,9 @@ import { InfoInsightsComponent } from './content/info-insights/info-insights.com
     MatMenuModule,
     MatButtonModule,
     MatIconModule,
-    ChartsModule
+    ChartsModule,
+    MatDialogModule,
+    MatBottomSheetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
