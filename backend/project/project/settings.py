@@ -177,4 +177,5 @@ JWT_AUTH = {
 
 }
 
+
 REST_USE_JWT = True
