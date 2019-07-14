@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'inventory',
     'menu',
     'bill',
+    'extra_expend',
 ]
 
 MIDDLEWARE = [

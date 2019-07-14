@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.utils.timezone import now
 
 User = get_user_model()
 
@@ -30,6 +31,7 @@ class InventoryFoodIN(models.Model):
     quantity = models.FloatField()
 
     price = models.FloatField()
+    date = models.DateField(default=now)
 
     added = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -45,6 +47,7 @@ class InventoryFoodOUT(models.Model):
 
     name = models.ForeignKey(InventoryFoodIN, on_delete=models.CASCADE, related_name='inventory_foods_out')
     quantity = models.FloatField()
+    date = models.DateField(default=now)
 
     added = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -84,6 +87,7 @@ class InventoryOtherIN(models.Model):
     quantity = models.FloatField()
 
     price = models.FloatField()
+    date = models.DateField(default=now)
 
     added = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -99,6 +103,7 @@ class InventoryOtherOUT(models.Model):
 
     name = models.ForeignKey(InventoryOtherIN, on_delete=models.CASCADE, related_name='inventory_others_out')
     quantity = models.FloatField()
+    date = models.DateField(default=now)
 
     added = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

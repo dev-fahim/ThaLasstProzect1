@@ -1,0 +1,1 @@
+from profile_app.models import MainUserProfile, SubUserProfile, Permission, ApplicationMonthlyPayment, Payment
